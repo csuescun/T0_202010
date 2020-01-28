@@ -13,7 +13,7 @@ public interface IArregloDinamico {
 	 * @return
 	 */
 	int darTamano( );
-	
+
 	/**
 	 * Retornar el elemento en la posicion i
 	 * @param i posicion de consulta
@@ -27,14 +27,14 @@ public interface IArregloDinamico {
 	 * @param dato nuevo elemento
 	 */
 	public void agregar( String dato );
-		
+
 	/**
 	 * Buscar un dato en el arreglo.
 	 * @param dato Objeto de busqueda en el arreglo
 	 * @return elemento encontrado en el arreglo (si existe). null si no se encontro el dato.
 	 */
 	String buscar(String dato);
-	
+
 	/**
 	 * Eliminar un dato del arreglo.
 	 * Los datos restantes deben quedar "compactos" desde la posicion 0.
