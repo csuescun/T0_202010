@@ -18,7 +18,7 @@ public class TestModelo {
 
 	public void setUp2() {
 		for(int i =0; i< CAPACIDAD;i++){
-			modelo.agregar(""+i);
+			modelo.agregar(i);
 		}
 	}
 
@@ -38,7 +38,7 @@ public class TestModelo {
 
 		while(i < CAPACIDAD) 
 		{
-			modelo.agregar(""+i);
+			modelo.agregar(i);
 			assertEquals(i+1, modelo.darTamano());
 			i++;
 		}
@@ -51,7 +51,7 @@ public class TestModelo {
 
 		while(i < CAPACIDAD) 
 		{
-			modelo.agregar(""+i);
+			modelo.agregar(i);
 			assertEquals(i+1, modelo.darTamano());
 			i++;
 		}
@@ -66,12 +66,12 @@ public class TestModelo {
 
 		while(i < CAPACIDAD) 
 		{
-			assertEquals(""+i, modelo.buscar(""+i));
+			assertEquals(""+i, modelo.buscar(i));
 			i++;
 		}
 
 		int ultimo = CAPACIDAD + 1;
-		assertEquals(null,modelo.buscar(""+ultimo));
+		assertEquals(null,modelo.buscar(ultimo));
 	}
 
 	@Test
@@ -79,11 +79,11 @@ public class TestModelo {
 	{
 		setUp2();
 
-		assertEquals(null, modelo.eliminar(""+CAPACIDAD+1));
+		assertEquals(null, modelo.eliminar(CAPACIDAD+1));
 
 		for(int i= 90; i < CAPACIDAD; i++)
 		{
-			assertEquals(""+ i,modelo.eliminar(""+i));
+			assertEquals(""+ i,modelo.eliminar(i));
 		}
 
 		assertEquals(90, modelo.darTamano());
