@@ -35,6 +35,7 @@ public class View
 		while(i < modelo.darTamano())
 		{
 			System.out.println(modelo.darElemento(i));
+			i++;
 		}
 	}
 }
